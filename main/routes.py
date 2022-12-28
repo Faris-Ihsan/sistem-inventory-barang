@@ -7,3 +7,6 @@ from flask import request, redirect, render_template
 def index():
     return render_template('index.html')
 
+@app.route('/tables')
+def tables():
+    return render_template('tables.html')
