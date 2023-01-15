@@ -128,3 +128,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# File Lama
+*.old
+Color Scheme Web Eric.jpg
