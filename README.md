@@ -1,1 +1,1 @@
-# eric's-web
+# Sistem Inventory Barang
