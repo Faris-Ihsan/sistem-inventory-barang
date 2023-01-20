@@ -2,5 +2,67 @@
 
 {% block content %}
 <h1>data Quarantine</h1>
-<p>Disini untuk melihat data quarantinenya</p>
+<table border="1">
+    <thead style="white-space: nowrap;">
+        <th>Tanggal Surat Jalan</th>
+        <th>Tanggal Terima</th>
+        <th>Tanggal Buat Item Arrival</th>
+        <th>Tanggal Posting Item</th>
+        <th>Tanggal Pallet Transport</th>
+        <th>Kode Barang</th>
+        <th>Nama Barang</th>
+        <th>No. PR</th>
+        <th>No. PO</th>
+        <th>Kode Style</th>
+        <th>Nama Style</th>
+        <th>Batch Number</th>
+        <th>Batch Vendor</th>
+        <th>Quantity</th>
+        <th>Expire Date</th>
+        <th>Satuan Gudang</th>
+        <th>Satuan Beli</th>
+        <th>Sisa Kedatangan</th>
+        <th>Jenis</th>
+        <th>Kualitas Bahan</th>
+        <th>Kualitas Kandungan Zat Kimia</th>
+        <th>Kebersihan Produk</th>
+        <th>Bentuk Fisik</th>
+        <th>Status</th>
+        <th>Opsi</th>
+    </thead>
+    <tbody>
+        {% for row in data_barang %}
+        <tr style="white-space: nowrap;">
+            <td>{{row.1}}</td>
+            <td>{{row.2}}</td>
+            <td>{{row.3}}</td>
+            <td>{{row.4}}</td>
+            <td>{{row.5}}</td>
+            <td>{{row.6}}</td>
+            <td>{{row.7}}</td>
+            <td>{{row.8}}</td>
+            <td>{{row.9}}</td>
+            <td>{{row.10}}</td>
+            <td>{{row.11}}</td>
+            <td>{{row.12}}</td>
+            <td>{{row.13}}</td>
+            <td>{{row.14}}</td>
+            <td>{{row.15}}</td>
+            <td>{{row.16}}</td>
+            <td>{{row.17}}</td>
+            <td>{{row.18}}</td>
+            <td>{{row.19}}</td>
+            <td>{{row.20}}</td>
+            <td>{{row.21}}</td>
+            <td>{{row.22}}</td>
+            <td>{{row.23}}</td>
+            <td>{{row.24}}</td>
+            <td>
+                <button>Edit</button>
+                <button>Hapus</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock %}
