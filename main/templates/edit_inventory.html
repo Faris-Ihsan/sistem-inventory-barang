@@ -118,15 +118,15 @@
                 <label class="col-sm-2 col-form-label" style="white-space: nowrap;">Satuan Gudang</label>
                 <div>
                     <select class="form-control" name="satuan_gudang" value="{{ data_barang.17 }}">
-                        <option>ampul</option>
-                        <option>box</option>
-                        <option>buah</option>
-                        <option>g</option>
-                        <option>Kit</option>
-                        <option>lembar</option>
-                        <option>ml</option>
-                        <option>set</option>
-                        <option>vial</option>
+                        <option {{ 'selected' if 'ampul' in data_barang.17 }}>ampul</option>
+                        <option {{ 'selected' if 'box' in data_barang.17 }}>box</option>
+                        <option {{ 'selected' if 'buah' in data_barang.17 }}>buah</option>
+                        <option {{ 'selected' if 'g' in data_barang.17 }}>g</option>
+                        <option {{ 'selected' if 'Kit' in data_barang.17 }}>Kit</option>
+                        <option {{ 'selected' if 'lembar' in data_barang.17 }}>lembar</option>
+                        <option {{ 'selected' if 'ml' in data_barang.17 }}>ml</option>
+                        <option {{ 'selected' if 'set' in data_barang.17 }}>set</option>
+                        <option {{ 'selected' if 'vial' in data_barang.17 }}>vial</option>
                     </select>
                 </div>
             </div>            
@@ -134,17 +134,17 @@
                 <label class="col-sm-2 col-form-label" style="white-space: nowrap;">Satuan Beli</label>
                 <div>
                     <select class="form-control" name="satuan_beli" value="{{ data_barang.18 }}">
-                        <option>ampul</option>
-                        <option>box</option>
-                        <option>buah</option>
-                        <option>g</option>
-                        <option>Kg</option>
-                        <option>Kit</option>
-                        <option>lembar</option>
-                        <option>L</option>
-                        <option>ml</option>
-                        <option>set</option>
-                        <option>vial</option>
+                        <option {{ 'selected' if 'ampul' in data_barang.18 }}>ampul</option>
+                        <option {{ 'selected' if 'box' in data_barang.18 }}>box</option>
+                        <option {{ 'selected' if 'buah' in data_barang.18 }}>buah</option>
+                        <option {{ 'selected' if 'g' in data_barang.18 }}>g</option>
+                        <option {{ 'selected' if 'kg' in data_barang.18 }}>Kg</option>
+                        <option {{ 'selected' if 'Kit' in data_barang.18 }}>Kit</option>
+                        <option {{ 'selected' if 'lembar' in data_barang.18 }}>lembar</option>
+                        <option {{ 'selected' if 'L' in data_barang.18 }}>L</option>
+                        <option {{ 'selected' if 'ml' in data_barang.18 }}>ml</option>
+                        <option {{ 'selected' if 'set' in data_barang.18 }}>set</option>
+                        <option {{ 'selected' if 'vial' in data_barang.18 }}>vial</option>
                     </select>
                 </div>
             </div>
@@ -158,41 +158,41 @@
             <div class="form-group col-md-2">
                 <label>Jenis</label>
                 <select class="form-control" name="jenis" value="{{ data_barang.19 }}">
-                    <option>Perlengkapan Lab</option>
-                    <option>Bahan Kimia</option>
+                    <option {{ 'selected' if 'Perlengkapan Lab' in data_barang.19 }} >Perlengkapan Lab</option>
+                    <option {{ 'selected' if 'Bahan Kimia' in data_barang.19 }}>Bahan Kimia</option>
                 </select>
             </div>
             <div class="form-group col-md-2">
                 <label>Kualitas Bahan</label>
                 <select class="form-control" name="kualitas_bahan" value="{{ data_barang.20 }}">
-                    <option value="0">Baik</option>
-                    <option value="1">Tidak Baik</option>
-                    <option value="2">Belum Diuji</option>
+                    <option value="0" {{ 'selected' if 'Baik' in data_barang.20 }}>Baik</option>
+                    <option value="1" {{ 'selected' if 'Tidak Baik' in data_barang.20 }}>Tidak Baik</option>
+                    <option value="2" {{ 'selected' if 'Belum Diuji' in data_barang.20 }}>Belum Diuji</option>
                 </select>
             </div>                    
             <div class="form-group col-md-3">
                 <label>Kualitas Kandungan Zat Kimia</label>
                 <select class="form-control" name="kualitas_kandungan_zat_kimia" value="{{ data_barang.21 }}">
-                    <option value="0">Baik</option>
-                    <option value="1">Tidak Baik</option>
-                    <option value="2">Belum Diuji</option>
-                    <option value="3">Tidak Ada</option>
+                    <option value="0" {{ 'selected' if 'Baik' in data_barang.21 }}>Baik</option>
+                    <option value="1" {{ 'selected' if 'Tidak Baik' in data_barang.21 }}>Tidak Baik</option>
+                    <option value="2" {{ 'selected' if 'Belum Diuji' in data_barang.21 }}>Belum Diuji</option>
+                    <option value="3" {{ 'selected' if 'Tidak Ada' in data_barang.21 }}>Tidak Ada</option>
                 </select>
             </div>
             <div class="form-group col-md-2">
                 <label>Kebersihan Produk</label>
                 <select class="form-control" name="kebersihan_produk" value="{{ data_barang.22 }}">
-                    <option value="0">Baik</option>
-                    <option value="1">Tidak Baik</option>
-                    <option value="2">Belum Diuji</option>
+                    <option value="0" {{ 'selected' if 'Baik' in data_barang.22 }}>Baik</option>
+                    <option value="1" {{ 'selected' if 'Tidak Baik' in data_barang.22 }}>Tidak Baik</option>
+                    <option value="2" {{ 'selected' if 'Belum Diuji' in data_barang.22 }}>Belum Diuji</option>
                 </select>
             </div>                
             <div class="form-group col-md-3">
                 <label>Bentuk Fisik</label>
                 <select class="form-control" name="bentuk_fisik" value="{{ data_barang.23 }}">
-                    <option value="0">Baik</option>
-                    <option value="1">Tidak Baik</option>
-                    <option value="2">Belum Diuji</option>
+                    <option value="0" {{ 'selected' if 'Baik' in data_barang.23 }}>Baik</option>
+                    <option value="1" {{ 'selected' if 'Tidak Baik' in data_barang.23 }}>Tidak Baik</option>
+                    <option value="2" {{ 'selected' if 'Belum Diuji' in data_barang.23 }}>Belum Diuji</option>
                 </select>
             </div>            
         </div>
