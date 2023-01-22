@@ -20,7 +20,7 @@ def index():
 @app.route('/data_inventory')
 def data_inventory():
     # Ambil data dari DB
-    cur.execute("SELECT * FROM data_barang;")
+    cur.execute("SELECT * FROM data_barang ORDER BY id_data;")
     data = cur.fetchall()
     return render_template('data_inventory.html', data_barang = data)
 
@@ -109,19 +109,6 @@ def insert_data():
 def edit_data(id_data):
     cur.execute("SELECT * FROM data_barang WHERE id_data = %s", (id_data, ))
     data = cur.fetchall()
-    
-    # arraya = []
-    # #test aja
-    # for kik in data[0]:
-    #     arraya.append(kik)
-
-    # i=0
-    # for kuk in arraya:
-    #     dor = str(kuk)
-    #     z = i
-    #     i = i + 1
-    #     print(str(z) + ":" + dor)
-
     return render_template('edit_inventory.html', data_barang = data[0])
 
 
