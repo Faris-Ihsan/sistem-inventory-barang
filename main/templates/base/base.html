@@ -16,6 +16,10 @@
     <link href="{{url_for('static', filename='css/navbar-top.css')}}" rel="stylesheet">
 
     <link href="{{url_for('static', filename='css/custom-navbar.css')}}" rel="stylesheet">
+
+    <!--DataTables Requirements File-->
+    <link href="{{url_for('static', filename='css/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/test.css')}}" rel="stylesheet">
   </head>
 
   <body>
@@ -58,5 +62,20 @@
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+    <!--DataTables Requirements File-->
+    <script src="{{ url_for('static', filename='js/jquery-3.5.1.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dataTables.bootstrap4.min.js') }}"></script>
+    {% block scripts %}
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable({
+                // scrollY: 200,
+                scrollX: true,
+            });
+        });
+    </script>
+    {% endblock %}
   </body> 
 </html>

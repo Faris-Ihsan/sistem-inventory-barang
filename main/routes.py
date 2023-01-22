@@ -168,3 +168,7 @@ def update_data(id_data):
         conn.commit()
 
     return redirect(url_for('data_inventory'))
+
+@app.route('/test')
+def test():
+    return render_template('test2.html')

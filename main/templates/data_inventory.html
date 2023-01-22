@@ -2,8 +2,9 @@
 
 {% block content %}
 <h1>data inventory</h1>
-<table border="1">
+<table id="example" class="table table-striped table-bordered display nowrap" style="width:100%">
     <thead style="white-space: nowrap;">
+        <th id="opsi"></th>
         <th>Tanggal Surat Jalan</th>
         <th>Tanggal Terima</th>
         <th>Tanggal Buat Item Arrival</th>
@@ -28,11 +29,14 @@
         <th>Kebersihan Produk</th>
         <th>Bentuk Fisik</th>
         <th>Status</th>
-        <th>Opsi</th>
     </thead>
     <tbody>
         {% for row in data_barang %}
         <tr style="white-space: nowrap;">
+            <td>
+                <button><a href="/edit/{{ row[0] }}"><img src="{{ url_for('static', filename='img/edit-button.png') }}" alt="Edit" width="20px" height="20px"></a></button>
+                <button><a href="/delete/{{ row.0 }}"><img src="{{ url_for('static', filename='img/delete.png') }}" alt="Delete" width="20px" height="20px"></a></button>
+            </td>
             <td>{{row.1}}</td>
             <td>{{row.2}}</td>
             <td>{{row.3}}</td>
@@ -57,10 +61,6 @@
             <td>{{row.22}}</td>
             <td>{{row.23}}</td>
             <td>{{row.24}}</td>
-            <td>
-                <button><a href="/edit/{{ row[0] }}">Edit</a></button>
-                <button><a href="/delete/{{ row.0 }}">Hapus</a></button>
-            </td>
         </tr>
         {% endfor %}
     </tbody>
