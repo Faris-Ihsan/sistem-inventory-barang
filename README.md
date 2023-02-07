@@ -1,4 +1,5 @@
 # Sistem Inventory Barang
+Pastikan versi python yang digunakan adalah python 3.7
 
 ## Cara Menjalankan
 ### Install Postgresql 
