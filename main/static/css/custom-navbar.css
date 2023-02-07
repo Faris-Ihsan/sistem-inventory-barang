@@ -35,3 +35,19 @@
 .show > .btn-outline-success.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
 }
+
+.btn-primary {
+    color: #fff;
+    background-color: #00abbd;
+    border-color: #00abbd;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #e46a26;
+    border-color: #e46a26;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem #a33e08;
+}
